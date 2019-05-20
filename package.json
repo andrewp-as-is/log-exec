@@ -1,0 +1,13 @@
+{
+  "name": "log-exec",
+  "version": "2019.5.15",
+  "description": "exec args and log stdout and stderr",
+  "keywords": [
+    "log"
+  ],
+  "homepage": "https://github.com/looking-for-a-job/log-exec",
+  "license": "Unlicense",
+  "bin": {
+    "log-exec": "./scripts/log-exec"
+  }
+}

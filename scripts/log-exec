@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+{ set +x; } 2>/dev/null
+
+usage() {
+    echo "usage: $(basename $0) command [args ...]" 1>&2
+    [[ $1 == "-h" ]] || [[ $1 == "--help" ]]; exit
+}
+
+[[ $1 == "-h" ]] || [[ $1 == "--help" ]] && usage "$@"
+
+[[ $# == 0 ]] && usage
+
+LOG_EXEC="${LOG_EXEC-/usr/local/var/log/log-exec}"
+
+name="$(echo "$@" | sed 's/\//_/g' | sed 's/ /_/g')"
+dir="$LOG_EXEC/$name"
+out="$dir/out.log"
+err="$dir/err.log"
+
+! [ -e "${out%/*}" ] && { mkdir -p "${out%/*}" || exit; }
+! [ -e "${err%/*}" ] && { mkdir -p "${err%/*}" || exit; }
+
+[ -e "$1" ] && ! [ -x "$1" ] && { chmod +x "$1" || exit; }
+"$@" > >(tee -a "$out") 2> >(tee -a "$err" >&2)
+
