@@ -16,9 +16,16 @@ $ [sudo] npm i -g log-exec
 $ [sudo] pip install log-exec
 ```
 
+#### How it works
+stdout and stderr are duplicated in log files:
+```bash
+$LOG_EXEC/<command>/out.log
+$LOG_EXEC/<command>/err.log
+```
+
 #### Config
 ```bash
-$ export LOG_COMMAND=~/Library/Logs/log-command # /usr/local/var/log/log-command by default
+$ export LOG_EXEC=~/Library/Logs/log-exec # /usr/local/var/log/log-exec by default
 ```
 
 #### Scripts usage
@@ -28,14 +35,14 @@ command|`usage`
 
 #### Examples
 ```bash
-$ log-command script.sh
+$ log-exec script.sh
 ```
 
-or use `log-command` as interpreter:
+or use `log-exec` as interpreter:
 
 `script.sh`
 ```bash
-#!/usr/bin/env log-command bash
+#!/usr/bin/env log-exec bash
 ...
 ```
 
