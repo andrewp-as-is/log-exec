@@ -1,19 +1,21 @@
 <!--
-https://pypi.org/project/readme-generator/
-https://pypi.org/project/python-readme-generator/
+https://readme42.com
 -->
+
+
 
 [![](https://img.shields.io/badge/OS-Unix-blue.svg?longCache=True)]()
 [![](https://img.shields.io/pypi/v/log-exec.svg?maxAge=3600)](https://pypi.org/project/log-exec/)
-[![](https://img.shields.io/npm/v/log-exec.svg?maxAge=3600)](https://www.npmjs.com/package/log-exec)
-[![Travis](https://api.travis-ci.org/looking-for-a-job/log-exec.svg?branch=master)](https://travis-ci.org/looking-for-a-job/log-exec/)
+[![](https://img.shields.io/npm/v/log-exec.svg?maxAge=3600)](https://www.npmjs.com/package/log-exec)[![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
+[![](https://github.com/andrewp-as-is/log-exec/workflows/tests42/badge.svg)](https://github.com/andrewp-as-is/log-exec/actions)
 
-#### Installation
-```bash
-$ [sudo] npm i -g log-exec
-```
+### Installation
 ```bash
 $ [sudo] pip install log-exec
+```
+
+```bash
+$ [sudo] npm i -g log-exec
 ```
 
 #### How it works
@@ -27,11 +29,6 @@ $LOG_EXEC/<command>/err.log
 ```bash
 $ export LOG_EXEC=~/Library/Logs/log-exec # /usr/local/var/log/log-exec by default
 ```
-
-#### Scripts usage
-command|`usage`
--|-
-`log-exec` |`usage: log-exec command [args ...]`
 
 #### Examples
 ```bash
@@ -47,5 +44,5 @@ or use `log-exec` as interpreter:
 ```
 
 <p align="center">
-    <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>
+    <a href="https://readme42.com/">readme42.com</a>
 </p>
