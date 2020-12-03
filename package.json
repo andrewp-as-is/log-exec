@@ -1,6 +1,6 @@
 {
   "name": "log-exec",
-  "version": "2019.5.15",
+  "version": "2020.12.3",
   "description": "exec args and log stdout and stderr",
   "keywords": [
     "log"
